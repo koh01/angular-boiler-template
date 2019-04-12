@@ -18,6 +18,12 @@
             <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
               First name is <strong>required</strong>
             </mat-error>
+            <mat-error *ngIf="addressForm.controls['firstName'].hasError('minlength')">
+              First name is <strong>min</strong>
+            </mat-error>
+            <mat-error *ngIf="addressForm.controls['firstName'].hasError('maxlength')">
+                First name is <strong>max</strong>
+              </mat-error>
           </mat-form-field>
         </div>
         <div class="col">
@@ -80,6 +86,15 @@
           <mat-form-field class="full-width">
             <input matInput #postalCode maxlength="5" placeholder="Postal Code" type="number" formControlName="postalCode">
             <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+            <!-- <mat-error *ngIf="addressForm.controls['postalCode'].hasError('required')">
+              PostalCode is <strong>required</strong>
+            </mat-error> -->
+            <!-- <mat-error *ngIf="addressForm.controls.postalCode.errors.required">
+              PostalCode is <strong>required</strong>
+            </mat-error> -->
+            <!-- <mat-error *ngIf="addressForm.controls['postalCode'].hasError('maxlength')">
+              PostalCode is <strong>required</strong>
+            </mat-error> -->
           </mat-form-field>
         </div>
       </div>

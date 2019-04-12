@@ -8,17 +8,23 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class FormsampleComponent {
   name = 'adf';
+  public readonly networkAddressPattern: string = '^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])[¥.]){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$';
+
+
   addressForm = this.fb.group({
     company: null,
-    firstName: [null, Validators.required],
+    firstName: [null, Validators.compose([
+      Validators.required, Validators.minLength(5), Validators.maxLength(10)])
+    ],
     lastName: [null, Validators.required],
     address: [null, Validators.required],
     address2: null,
     city: [null, Validators.required],
     state: [null, Validators.required],
-    postalCode: [null, Validators.compose([
-      Validators.required, Validators.minLength(5), Validators.maxLength(5)])
-    ],
+    // postalCode: [null, Validators.compose([
+    //   Validators.required, Validators.minLength(5), Validators.maxLength(5)])
+    // ],
+    postalCode: [null, Validators.minLength(5)],
     shipping: ['free', Validators.required]
   });
 
@@ -89,6 +95,7 @@ export class FormsampleComponent {
   constructor(private fb: FormBuilder) {}
 
   onSubmit() {
+    console.log(this.addressForm);
     alert('Thanks!');
   }
 }
