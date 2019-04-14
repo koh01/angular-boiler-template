@@ -44,7 +44,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <input matInput #postalCode maxlength="5" placeholder="Postal Code" type="number" formControlName="postalCode">
+            <input matInput #postalCode maxlength="5" placeholder="郵便番号" type="number" formControlName="postalCode">
             <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
             <!-- <mat-error *ngIf="addressForm.controls['postalCode'].hasError('required')">
               PostalCode is <strong>required</strong>
@@ -97,22 +97,22 @@
       <div class="row">
         <div class="col">
           <mat-radio-group formControlName="shipping">
-            <mat-radio-button value="free">Free Shipping</mat-radio-button>
-            <mat-radio-button value="priority">Priority Shipping</mat-radio-button>
-            <mat-radio-button value="nextday">Next Day Shipping</mat-radio-button>
+            <mat-radio-button value="free">無料配送</mat-radio-button>
+            <mat-radio-button value="priority">優先配送</mat-radio-button>
+            <mat-radio-button value="nextday">翌日配送</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>
       <div class="row">
         <div class="col">
           <mat-form-field class="full-width">
-            <textarea matInput placeholder="備考" formControlName="remarks"></textarea>
+            <textarea matInput rows="5" placeholder="備考" formControlName="remarks"></textarea>
           </mat-form-field>
         </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="submit">登録</button>
     </mat-card-actions>
   </mat-card>
 </form>
