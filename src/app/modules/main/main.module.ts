@@ -6,12 +6,14 @@ import { SharedModule } from '../shared/shared.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TestComponent } from './test/test.component';
 import { MaterialModule } from 'src/app/material/material.module';
+import { AddComponent } from './add/add.component';
 
 @NgModule({
   declarations: [
     MainComponent,
     NavigationComponent,
-    TestComponent
+    TestComponent,
+    AddComponent
   ],
   imports: [
     CommonModule,
