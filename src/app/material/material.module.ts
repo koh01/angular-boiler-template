@@ -17,6 +17,7 @@ import {
   MatNativeDateModule,
   MAT_DATE_LOCALE,
   DateAdapter,
+  MatAutocompleteModule,
 } from '@angular/material';
 import { PortalModule } from '@angular/cdk/portal';
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -39,7 +40,8 @@ export const marterial_modules = [
   MatCheckboxModule,
   MatDatepickerModule,
   MatNativeDateModule,
-
+  MatAutocompleteModule,
+  
   LayoutModule,
   OverlayModule,
   PortalModule,
