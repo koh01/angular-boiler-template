@@ -30,6 +30,7 @@ export class FormsampleComponent {
     postalCode: [null, Validators.minLength(5)],
     shipping: ['free', Validators.required],
     remarks: null,
+    picker: null,
   });
 
   hasUnitNumber = false;

@@ -13,7 +13,7 @@
       </div> -->
       <div class="row">
         <div class="col">
-          <mat-form-field class="full-width">
+          <mat-form-field class="full-width" hintLabel="">
             <input matInput placeholder="名前" formControlName="firstName">
             <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
               名前は<strong>必須</strong>です
@@ -101,6 +101,20 @@
             <mat-radio-button value="priority">優先配送</mat-radio-button>
             <mat-radio-button value="nextday">翌日配送</mat-radio-button>
           </mat-radio-group>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-checkbox>Check me!</mat-checkbox>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [matDatepicker]="picker" placeholder="配送日時" formControlName="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
         </div>
       </div>
       <div class="row">
